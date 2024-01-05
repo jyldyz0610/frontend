@@ -1,0 +1,44 @@
+body {
+    background-image: url('image.jpg');
+    /* Weitere Hintergrund-Eigenschaften hier */
+    /* Grundstil für den Button */
+/* In deiner styles.css oder einer neuen CSS-Datei */
+
+.btn-success {
+    background-color: #5581b1; /* Beispiel-Farbe (blau) für den Absenden-Button */
+    color: #ffffff; /* Textfarbe des Buttons */
+    /* Weitere Anpassungen für den Button-Stil hier */
+}
+
+/* Hover-Stil für den Button */
+.btn-success:hover {
+    background-color: #0056b3; /* Dunklere Nuance der Hauptfarbe für den Hover-Zustand */
+    /* Weitere Anpassungen für den Hover-Stil hier */
+}
+
+/* Aktiver Zustand des Buttons */
+.btn-success:active {
+    background-color: #061c35; /* Noch dunklere Nuance der Hauptfarbe für den aktiven Zustand */
+    /* Weitere Anpassungen für den aktiven Zustand hier */
+}
+
+.fa-edit,
+.fa-trash-alt {
+  font-size: 14px; /* Ändere die Größe der Symbole */
+}
+.fa-edit,
+.fa-trash-alt {
+  margin-right: 0px; /* Füge rechts einen Abstand zwischen den Symbolen hinzu */
+}
+
+.fa-edit {
+    color: blue; /* Ändere die Farbe des Edit-Symbols */
+  }
+  
+  .fa-trash-alt {
+    color: rgb(202, 24, 24); /* Ändere die Farbe des Delete-Symbols */
+  }
+  
+
+}
+

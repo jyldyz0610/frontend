@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="container bg-light">
+  <script id="link-item-template" type="text/x-handlebars-template">
+    <tr>
+      <th scope="row">{{index}}</th>
+      <td>
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="{{link}}" target="_blank">{{link}}</a>
+          <div>
+            <a class="dropdown-item" onclick="editLink('{{id}}')" style="cursor: pointer;">
+              <i class="fas fa-edit"></i>
+            </a>
+            <a class="dropdown-item" onclick="deleteLink('{{id}}')" style="cursor: pointer;">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </script>
+
+  <div class="modal" tabindex="-1" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Item</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form">
+            <input type="text" name="item" id="item">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="dialog-close" class="btn btn-danger">schliessen</button>
+          <button id="dialog-save" class="btn btn-success">speichern</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-warning card rounded-4 mx-auto my-3 p-3" style="width: 550px">
+    <P ALIGN="center">Welcome to the best first App of the world </P>
+    <h3 class="text-center"><font color="blue">knowledge<sup>App</sup></font></h3>
+    
+
+    <input type="text" id="link-item" placeholder="Enter new link Item">
+    <button onclick="sendLink();" class="btn btn-success">Absenden</button>
+    <div id="link-container" class="container">
+      <table class="table table-hover" id="link-table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Links</th>
+          </tr>
+        </thead>
+        <tbody id="link-tbody">
+          <!-- Hier werden deine Link-Elemente dynamisch hinzugefügt -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
